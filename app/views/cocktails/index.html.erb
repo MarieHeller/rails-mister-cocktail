@@ -1,0 +1,24 @@
+<div class="banner" style="background-image: linear-gradient(to left, rgba(30,30, 30, 0.4),rgba(30,30, 30, 0.4)), url(https://images.unsplash.com/photo-1468072114808-903e572b8ead?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1932&q=80)">
+  <div class="header">
+    <h1>Cocktail Temptation</h1>
+    <h4>---Est. 2019---</h4>
+  </div>
+</div>
+
+<div class="d-flex justify-content-around">
+<% @cocktails.each do |cocktail| %>
+<div class="card" style="width: 20rem">
+<img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= cocktail.name %></h5>
+    <p class="card-text">Oh so yummy</p>
+    <%= link_to 'Mix it!', cocktail_path(cocktail), class: "btn btn-primary" %>
+  </div>
+</div>
+<% end %>
+</div>
+
+
+<%= link_to new_cocktail_path do %>
+<i class="fas fa-plus"></i> New Cocktail
+<% end %>
