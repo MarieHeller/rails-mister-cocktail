@@ -1,0 +1,92 @@
+// .card {
+//   background-size: cover;
+//   background-position: center;
+//   // height: 150px;
+//   border-radius: 1px;
+//   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+//   font-size: 22px;
+//   color: white;
+//   font-weight: bolder;
+//   text-shadow: 0 0 10px rgba(0,0,0,0.7);
+//   margin-bottom: 16px;
+//   width: 100px;
+// }
+
+.cocktails {
+  margin: 30px;
+}
+
+.card {
+  box-shadow: 0 2px 0px -2px rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 32px;
+}
+
+.background {
+  background-color: white;
+}
+.card-image {
+  height: 200px;
+  background-position: cover;
+  background-size: center;
+}
+
+
+.card-text {
+  font-family: 'Cinzel', serif;
+  font-size: 21px;
+  text-align: center;
+}
+
+.card-description {
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.btn {
+  border: solid thin #999999;
+  border-radius: 16px;
+  padding: 0px 11px;
+  font-weight: lighter;
+  color: #999999;
+  opacity: 0.6;
+  transition: 0.3s;
+  width: 78px;
+  height: 24px;
+  size: 10px;
+}
+
+.btn {
+  opacity: 1;
+}
+
+.btn a {
+  size: 10px;
+}
+
+
+.new {
+  border: solid thin #999999;
+  border-radius: 16px;
+  padding: 4px 11px;
+  font-weight: lighter;
+  color: #999999;
+  opacity: 0.6;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 165px;
+  height: 33px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 450px;
+}
+
+a {
+ color: #999999;
+}

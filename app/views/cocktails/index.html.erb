@@ -1,24 +1,39 @@
+<div class="background">
 <div class="banner" style="background-image: linear-gradient(to left, rgba(30,30, 30, 0.4),rgba(30,30, 30, 0.4)), url(https://images.unsplash.com/photo-1468072114808-903e572b8ead?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1932&q=80)">
-  <div class="header">
-    <h1>Cocktail Temptation</h1>
-    <h4>---Est. 2019---</h4>
+  <div class="card-header ">
+    <div class="card-body">
+      <h1>Cocktail Temptation</h1>
+      <h4>---Est. 2019---</h4>
+    </div>
   </div>
 </div>
 
-<div class="d-flex justify-content-around">
-<% @cocktails.each do |cocktail| %>
-<div class="card" style="width: 20rem">
-<img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><%= cocktail.name %></h5>
-    <p class="card-text">Oh so yummy</p>
-    <%= link_to 'Mix it!', cocktail_path(cocktail), class: "btn btn-primary" %>
+
+<div class="cocktails" style="margin: 30px">
+  <div class="row">
+    <% @cocktails.each do |cocktail|  %>
+    <div class="col-12 col-md-6 col-lg-4" >
+      <div class="card">
+       <%= cl_image_tag cocktail.photo, crop: :fill, class: "card-image"   %>
+       <div class="card-body">
+        <h2 class="card-text"><%= cocktail.name %></h2>
+        <p class="card-description">Featured by Cocktail Temptation</p>
+        <div class="d-flex justify-content-center">
+        <%= link_to 'Try it', cocktail_path(cocktail), class: "btn" %>
+        </div>
+      </div>
+    </div>
   </div>
+  <% end %>
 </div>
-<% end %>
+
+<div class="new">
+  <%= link_to new_cocktail_path do %>
+  <i class="fas fa-plus"></i> New Cocktail
+  <% end %>
+</div>
 </div>
 
 
-<%= link_to new_cocktail_path do %>
-<i class="fas fa-plus"></i> New Cocktail
-<% end %>
+
+
